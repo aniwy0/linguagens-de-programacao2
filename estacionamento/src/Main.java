@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class Main {
 
     private static final int TOTAL_VAGAS = 10;
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = Terminal.criarScanner();
     private static final Estacionamento estacionamento = new Estacionamento(TOTAL_VAGAS);
 
     public static void main(String[] args) {
+        Terminal.configurar();
         int opcao;
         do {
             exibirMenu();
